@@ -1,16 +1,16 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import propTypes from "prop-types";
-import {ListGroup, Modal} from "react-bootstrap";
-import {getTopTenCryptoData} from "../services/CoinGeckoRestService";
+import { ListGroup, Modal } from "react-bootstrap";
+import { getTopTenCryptoData } from "../services/CoinGeckoRestService";
 import CryptoDetail from "./CryptoDetail";
 import CryptoItem from "./CryptoItem";
-import {simulatePrice} from "../services/PriceSimulationService";
+import { simulatePrice } from "../services/PriceSimulationService";
 
 /**
  * component representing a list of cryptocurrencies.
  * @return {JSX.Element} The rendered CryptoList component.
  */
-function CryptoList({balance, setBalance}) {
+function CryptoList({ balance, setBalance }) {
     const [cryptoData, setCryptoData] = useState([]);
     const [selectedCoin, setSelectedCoin] = useState(null);
     const [showModal, setShowModal] = useState(false);
@@ -38,6 +38,7 @@ function CryptoList({balance, setBalance}) {
 
     const updateCryptoData = () => {
         setCryptoData((prevCryptoData) => {
+            console.log("updating crypto data " + prevCryptoData);
             const updatedData = prevCryptoData.map((coin) => {
                 const updatedPrice = simulatePrice(coin.current_price);
 

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import CryptoList from "./components/CryptoList";
 import "./App.css";
 import Navbar from "./components/Navbar";
