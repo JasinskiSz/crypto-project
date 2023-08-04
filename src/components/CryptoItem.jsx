@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {ListGroupItem} from "react-bootstrap";
+import { ListGroupItem } from "react-bootstrap";
 
 /**
  * renders a single cryptocurrency item.
@@ -9,7 +9,7 @@ import {ListGroupItem} from "react-bootstrap";
  * @param {Function} props.onItemClick
  * @return {JSX.Element} The rendered CryptoItem component.
  */
-function CryptoItem({coin, onItemClick}) {
+function CryptoItem({ coin, onItemClick }) {
     const handleItemClick = () => {
         onItemClick(coin.id);
     };

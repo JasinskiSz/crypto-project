@@ -7,7 +7,7 @@ import propTypes from "prop-types";
  * @param {number} props.balance - The player's balance.
  * @return {JSX.Element}
  */
-export default function PlayerBank({balance}) {
+export default function PlayerBank({ balance }) {
     return (
         <div>
             <p>Balance: {balance} PLN</p>

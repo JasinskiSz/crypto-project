@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./styles/Navbar.css";
-import {Button, Form} from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import PlayerBank from "./PlayerBank";
 
-const Navbar = ({logo, appName, balance}) => {
+const Navbar = ({ logo, appName, balance }) => {
     const [name, setName] = useState("");
     const [registered, setRegistered] = useState(false);
 
